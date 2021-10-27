@@ -1,2 +1,6 @@
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+
+<% flash.each do |type, message| %>
+<div class="<%= type == :error ? "alert alert-danger" : "alert alert-info" %>">
+  <%= message %>
+</div>
+<% end %>
